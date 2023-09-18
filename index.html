@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload="SetTodayDateTime();">
+    <h3>Perfume Order Form</h3>
+    <form action="#" id="formProduct">
+        <label for="productType">Select Product Type</label>
+
+        <span>
+            <input type="radio" name="productType" id="manProducts" value="Male" onchange="BringProducts();">
+            <label for="manProducts">Men's Products</label>
+            <input type="radio" name="productType" id="womanProducts" value="Female" onchange="BringProducts();">
+            <label for="womanProducts">Women's Products</label>
+        </span>
+
+        <label for="giftPackage">Gift Package</label>
+        <span>
+            <input type="radio" name="giftPackage" value="true">
+            <label for="true">True</label>
+            <input type="radio" name="giftPackage" value="false" checked>
+            <label for="false">False</label>
+        </span>
+
+        <label for="listProduct">Please Select a Product</label>
+        <select onchange="ProductQuantityFill(); ProductInstallmentFill();" id="listProduct" size="4">
+        </select>
+
+        <label for="productMl">Select Product Ml</label>
+        <select id="productMl" name="productMl">
+            <option value="30ml">30 ml</option>
+            <option value="50ml">50 ml</option>
+            <option value="70ml">70 ml</option>
+        </select>
+
+        <label id="amount" for="productQuantity">Select Product Quantity</label>
+        <select id="productQuantity">
+        </select>
+
+        <label for="productInstallment">Select Number of Installments</label>
+        <select id="productInstallment">
+        </select>
+
+        <label for="img">Product Image</label>
+        <input type="image" class="imgPerfume" src="img/perfume.jpg" id="img">
+
+        <label for="myDatetimeInput">Select Date and Time</label>
+        <input class="dateLocal" type="datetime-local" id="myDatetimeInput">
+
+        <div class="buttonAll">
+            <input type="button" value="Calculate" id="subtotalButton" onclick="Calculate();">
+            <a onclick="SaveOrderToLocalStorage(); DecreaseAmount();">
+                <input class="totalButton" type="button" value="Place Order" id="subtotalButton">
+            </a>
+        </div>
+        <div class="container"></a>
+            <label for="listProduct"><a href="insert.html" class="allProduct" id="addProduct">Add Product</a></label>
+            <label for="listProduct"><a href="tables.html" class="allProduct" id="allProduct">All products</a></label>
+            <label for="listProduct"><a href="order.html" class="orderProduct" id="addProduct">My orders</a></label>
+        </div>
+    </form>
+
+    <div class="resultContent">
+        <div class="priceContent">
+            <div for="txtUnitPrice">Unit price of the product</div>
+            <input type="text" id="txtUnitPrice" disabled>
+        </div>
+        <div class="subtotalContent">
+            <div for="txtSubtotalButton">Subtotal Amount</div>
+            <input type="text" id="txtSubtotalButton" disabled>
+        </div>
+        <div class="shippingContent">
+            <div for="txtShipping">Shipping Cost</div>
+            <input type="text" id="txtShipping" disabled>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+
+    <h5 id="result"></h5>
+    <br>
+
+</body>
+
+</html>

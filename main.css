@@ -1,0 +1,140 @@
+form {
+    margin: auto;
+    width: 44%;
+    display: grid;
+    grid-template-columns: auto min-content;
+    border: 1px solid black;
+}
+
+span {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: repeat(4, 20px);
+}
+
+select {
+    margin: 0.25rem;
+}
+
+h3,
+h5 {
+    text-align: center;
+}
+
+form>label {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+form>span {
+    border-bottom: thin solid;
+    padding: 1rem;
+}
+
+.container {
+    gap: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+}
+
+.buttonAll {
+    display: flex;
+    gap: 20px;
+    place-self: center;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.addProduct {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid grey;
+    text-decoration: none;
+}
+
+.allProduct,
+.orderProduct {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid grey;
+    text-decoration: none;
+}
+
+.resultContent {
+    padding: 16px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.subtotalContent,
+.shippingContent,
+.priceContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgPerfume {
+    padding: 4px;
+    width: 100px;
+    height: auto;
+    border-radius: 1rem;
+    position: relative;
+    justify-self: center;
+}
+
+.dateLocal {
+    position: relative;
+    width: auto;
+    height: 1.5rem;
+}
+
+.totalButton {
+    cursor: pointer;
+}
+
+.productFile {
+    cursor: pointer;
+}
+
+.commonButton {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.commonLink {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
+}

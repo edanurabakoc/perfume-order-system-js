@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h3>Perfume Addition Form</h3>
+
+    <form action="#" id="formProduct">
+        <label for="productType">Select Product Type</label>
+        <span>
+            <input type="radio" name="productType" id="manProducts" value="Male">
+            <label for="manProducts">Men's Products</label>
+            <input type="radio" name="productType" id="womanProducts" value="Female" checked>
+            <label for="womanProducts">Women's Products</label>
+        </span>
+        <label for="listProduct">Enter Product Name</label>
+        <input name="productName" id="listProduct" size="4"></input>
+        <label for="productMl">Select Product ML</label>
+        <select id="productMl" name="productMl">
+            <option value="30ml">30 ml</option>
+            <option value="50ml">50 ml</option>
+            <option value="70ml">70 ml</option>
+        </select>
+        <label for="productPrice">Enter Product Price</label>
+        <input name="productPrice" id="productPrice" type="number"></input>
+        <label for="productQuantity">Select Product Quantity</label>
+        <input name="productQuantity" id="productQuantity" type="number"></input>
+        <label for="productInstallment">Select Installment Count</label>
+        <input name="productInstallment" id="productInstallment" type="number"></input>
+        <label class="productFile" for="productFile">Product File</label>
+        <input class="productFile" name="productFile" id="productFile" accept="image/jpeg" type="file">
+    </form>
+    <div class="buttonContainer">
+        <button class="commonButton"> <a id="revertButton" class="commonLink" href="index.html">Back</a></button>
+        <button id="subtotalButton" class="commonButton" onclick="Add();">Add</button>
+    </div>
+
+    <h5 id="result"></h5>
+
+    <script src="insert.js"></script>
+</body>
+
+</html>
