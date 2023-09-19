@@ -38,4 +38,4 @@ You can now start using the application.
 
 ## Support
 - Maybe you can help improve the code.
-- At worst, you can give this repository a Star.
+- You can give this repository a Star.
