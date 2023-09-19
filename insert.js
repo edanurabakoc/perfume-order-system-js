@@ -1,5 +1,16 @@
 let renderPerfumes = localStorage.getItem('perfumes');
 
+function limitInput(event, maxValue) {
+    const value = event.target.value;
+    if (parseInt(value) > maxValue || isNaN(value)) {
+        event.preventDefault();
+    }
+}
+
+document.getElementById('productInstallment').addEventListener('input', (e) => limitInput(e, 12));
+document.getElementById('productQuantity').addEventListener('input', (e) => limitInput(e, 1000));
+document.getElementById('productPrice').addEventListener('input', (e) => limitInput(e, 100000));
+
 function Add() {
     const productName = document.getElementById('listProduct').value;
     const productPrice = document.getElementById('productPrice').value;
@@ -21,8 +32,20 @@ function Add() {
         return;
     }
 
-    if (isNaN(productInstallment) || productInstallment > 12) {
-        alert('The number of installments cannot be greater than 12');
+    if (productInstallment < 1 || productInstallment > 12) {
+        alert('The number of installments must be between 1 and 12.');
+        return;
+    }
+
+    const productQuantityInt = parseInt(productQuantity);
+    if (productQuantityInt < 1 || productQuantityInt > 1000) {
+        alert('The product quantity must be between 1 and 1000.');
+        return;
+    }
+
+    const productPriceInt = parseInt(productPrice);
+    if (productPriceInt < 1 || productPriceInt > 100000) {
+        alert('The product price must be between 1 and 100000.');
         return;
     }
 
